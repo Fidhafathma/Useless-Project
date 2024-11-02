@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Emogia</title> 
+        <style>
+            #heading{
+                background:linear-gradient(180deg,rgb(16, 157, 16),rgb(27, 5, 5));
+                -webkit-background-clip: text; /* Clip the background to the text */
+                -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+               font-size: 70px;
+               text-align: center;
+               font-family:'Times New Roman', Times, serif;
+               top:10px;
+
+
+            }
+
+             .strawberry {
+                 position: relative;
+                width: 80px;
+                 height: 100px;
+                width: 30%; /* or any fixed width */
+                 margin: 0 auto; 
+                 box-shadow: offsetX offsetY blurRadius spreadRadius color;  
+            }
+               
+            body{
+               background:url("https://wallpapercave.com/wp/BhcQpIw.jpg");;
+            }
+
+/* Main berry part */
+            .berry {
+  
+                 width: 400px;
+                height: 500px;
+                 background:linear-gradient(135deg,rgb(211, 13, 102),rgb(99, 4, 59));
+                 border-radius: 50% 50% 80% 80%; /* Rounded top and pointed bottom */
+                 position: absolute;
+                 top: 20px;
+                }
+                .bubble {
+            width: 80px;
+            height: 80px;
+            background: rgba(86, 8, 32, 0.8);
+            border-radius: 50%;
+            font-size: 60px; 
+            text-align: center;
+            
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for each bubble */
+            position: absolute;
+        }
+
+        .bubble1 { top: 70px; left: 40px; }
+   .bubble2 { top: 70px; left: 150px; }
+   .bubble3 { top: 70px; left: 260px; }
+
+    .bubble4 { top: 180px; left: 40px; }
+    .bubble5 { top: 180px; left: 150px; }
+    .bubble6 { top: 180px; left: 260px; }
+    .bubble7 { top: 290px; left: 40px; }
+
+    .bubble8 { top: 290px; left: 150px; }
+    .bubble9{ top: 290px; left: 260px; }
+    .bubble10{ top: 400px; left: 100px; }
+
+    .bubble11 { top: 400px; left: 200px; }*/
+
+   
+    .emoji-display {
+            display: none; /* Initially hidden */
+            font-size: 10em; /* Size of the emoji */
+            color: #333;
+          /*  text-align: center;*/
+            position: absolute; /* Center the emoji */
+            /* Move it vertically */
+            top:100px;
+            left: 50%; /* Move it horizontally */
+          /* Center it */
+        }
+        .back-button {
+            display: none;
+            width:100px;
+            height: 50px;
+            font-size: 20px;
+            position: absolute;
+            top: 600px;
+            left: 750px;
+           
+           
+            background-color: #5615df;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            z-index: 999;
+        }
+        #sub{
+            color: rgb(48, 178, 12);
+            top:20px;
+            font-size: 40px;
+               text-align: center;
+               font-family:cursive;
+
+        }
+
+
+
+        </style>
+    </head>
+    <body>
+        <h1 id="heading">POP IT!!!!</h1>
+        <h2 id="sub">pop and exploreeee...</h2>
+        <div class="strawberry" id="strawberry">
+            <div class="berry"></div>
+           
+            <button class="bubble bubble1 "  onclick="popBubble(this)"></button>
+            <button class="bubble bubble2" onclick="popBubble(this)"></button>
+            <button class="bubble bubble3" onclick="popBubble(this)"></button>
+            <button class="bubble bubble4" onclick="popBubble(this)"></button>
+            <button class="bubble bubble5" onclick="popBubble(this)"></button>
+            <button class="bubble bubble6"onclick="popBubble(this)"></button>
+            <button class="bubble bubble7"onclick="popBubble(this)"></button>
+            <button class="bubble bubble8"onclick="popBubble(this)"></button>
+            <button class="bubble bubble9"onclick="popBubble(this)"></button>
+            <button class="bubble bubble10"onclick="popBubble(this)"></button>
+            <button class="bubble bubble11"onclick="popBubble(this)"></button>
+         
+            <div class="emoji-display" id="emoji-display">
+               
+            </div>
+        
+          </div>
+          <button class="back-button" id="back-button"  onclick='resetBubbles()'>Go back</button>
+        <script>
+              const emojis = ["😀", "😅", "😂", "😍", "😎", "🥳", "😱", "😜", "😡", "🥺"];
+              function popBubble(element) {
+            // Hide everything in the body except for the emoji display
+            document.getElementById("strawberry").style.display = 'none';
+            document.getElementById("sub").style.display = 'none';
+            // Clear all existing content in the body
+            
+            // Select a random emoji from the array
+            const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+            const emojiDisplay = document.getElementById("emoji-display");
+            // const emojiDisplay = document.createElement('div');
+            emojiDisplay.innerHTML = randomEmoji;
+            emojiDisplay.className = 'emoji-display';
+            emojiDisplay.style.display = 'block'; // Show the emoji display
+            
+            // Append the emoji display to the body
+            document.body.appendChild(emojiDisplay);
+            document.body.style.textAlign = 'center'; // Center the emoji display
+            document.body.style.fontSize = '30em'; // Adjust font size for the emoji
+            document.body.style.color = '#333'; // Set color for the emoji
+            document.body.style.position = 'relative'; // Set body position relative
+            emojiDisplay.style.position = 'absolute'; // Set emoji position to absolute
+            emojiDisplay.style.top = '10%'; // Center vertically
+            emojiDisplay.style.left = '30%'; // Center horizontally
+           // emojiDisplay.style.transform = 'translate(-50%, -50%)'; // Adjust for centering
+           const backButton = document.getElementById("back-button");
+            backButton.style.display = 'block';
+        }
+
+        function resetBubbles() {
+            // Show the strawberry container and hide the emoji and back button
+            document.getElementById("strawberry").style.display = 'block';
+            document.getElementById("emoji-display").style.display = 'none';
+            document.getElementById("back-button").style.display = 'none';
+            document.getElementById("sub").style.display = 'block';
+        }
+    
+        </script>  
+
+
+
+    </body>
+</html>
