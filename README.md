@@ -37,43 +37,15 @@ VS Code
 For Software:
 
 # Screenshots (Add at least 3)
+![image](https://github.com/user-attachments/assets/23923e45-4b40-449a-a18e-65f202574125)
+![image](https://github.com/user-attachments/assets/59a4898b-84d3-4471-b71a-1318b32db508)
+![image](https://github.com/user-attachments/assets/9d425486-417c-4a93-9407-19db2044b998)
 
-
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
-
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
-### Project Demo
-# Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
-
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
-Aysha Reeha - 
-Fidha Fathima - 
-Amrutha Prasad -
+Aysha Reeha - HTML
+Fidha Fathima - CSS
+Amrutha Prasad - Javascript
 ---
 Made with ❤️ at TinkerHub Useless Projects 
 
